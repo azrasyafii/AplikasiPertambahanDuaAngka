@@ -72,9 +72,19 @@ textFieldAngka2.addFocusListener(new java.awt.event.FocusAdapter() {
 
         jLabel3.setText("Hasil");
 
+        textFieldAngka1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldAngka1FocusGained(evt);
+            }
+        });
         textFieldAngka1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldAngka1ActionPerformed(evt);
+            }
+        });
+        textFieldAngka1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldAngka1KeyTyped(evt);
             }
         });
 
@@ -191,6 +201,18 @@ textFieldAngka2.addFocusListener(new java.awt.event.FocusAdapter() {
     private void textFieldAngka1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldAngka1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldAngka1ActionPerformed
+
+    private void textFieldAngka1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldAngka1KeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c) && c != '.') {
+            evt.consume();  // Mengabaikan karakter non-angka
+             JOptionPane.showMessageDialog(this, "Hanya Angka yang diIzinkan!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_textFieldAngka1KeyTyped
+
+    private void textFieldAngka1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textFieldAngka1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldAngka1FocusGained
 
     /**
      * @param args the command line arguments

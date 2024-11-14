@@ -112,7 +112,9 @@
     </Component>
     <Component class="javax.swing.JTextField" name="textFieldAngka1">
       <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="textFieldAngka1FocusGained"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldAngka1ActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textFieldAngka1KeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="textFieldAngka2">
