@@ -3,7 +3,8 @@
 ## Data Diri
 
 - Muhammad Azra Syafi'i (2210010285)
-
+- FTI Non Reguler 5A Banjarmasin
+- Universitas Islam Kalimantan 
 
 ## Keunggulan Project
 
